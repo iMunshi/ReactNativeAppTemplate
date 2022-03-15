@@ -1,0 +1,55 @@
+{
+  "name": "reactnativeapptemplate",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "start": "react-native start",
+    "start:clean": "react-native start --reset-cache",
+    "watch:del": "watchman watch-del '/Users/munshi/Codes/Rokt/ReactNativeAppTemplate' ; watchman watch-project '/Users/munshi/Codes/Rokt/ReactNativeAppTemplate'",
+    "test": "jest",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "clean": "watchman watch-del-all && rm -rf node_modules && yarn && yarn start --reset-cache; rm -rf /tmp/metro-*",
+    "format": "prettier --write .",
+    "check:format": "prettier --check .",
+    "check:lint": "eslint . --ext .js,.jsx,.ts,.tsx --cache",
+    "check:types": "tsc --pretty --noEmit --incremental",
+    "check:all": "yarn format && yarn check:format && yarn check:lint && yarn check:types",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "react": "17.0.2",
+    "react-native": "0.67.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.9",
+    "@babel/preset-env": "^7.1.6",
+    "@babel/runtime": "^7.12.5",
+    "@react-native-community/eslint-config": "^2.0.0",
+    "@types/jest": "^27.4.1",
+    "@types/react": "^17.0.40",
+    "@types/react-native": "^0.67.2",
+    "@types/react-test-renderer": "^17.0.1",
+    "@typescript-eslint/eslint-plugin": "^5.14.0",
+    "@typescript-eslint/parser": "^5.14.0",
+    "babel-jest": "^26.6.3",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "eslint": "7.28.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.29.4",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "husky": ">=6",
+    "jest": "^26.6.3",
+    "lint-staged": ">=10",
+    "metro-react-native-babel-preset": "^0.66.2",
+    "prettier": "^2.5.1",
+    "react-test-renderer": "17.0.2",
+    "typescript": "^4.6.2"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": "eslint --cache --fix"
+  }
+}
