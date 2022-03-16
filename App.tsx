@@ -1,3 +1,4 @@
+import Hello from '@components/Hello';
 import React from 'react';
 import {
   SafeAreaView,
@@ -15,7 +16,6 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
-import Hello from '@components/Hello';
 
 const Section: React.FC<{
   title: string;

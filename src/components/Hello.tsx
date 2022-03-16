@@ -1,7 +1,7 @@
-import React from 'react';
-import { Button, StyleSheet, Text, View } from 'react-native';
 import Old from '@components/Old';
 import Plain from '@components/Plain';
+import React from 'react';
+import { Button, StyleSheet, Text, View } from 'react-native';
 
 export type Props = {
   name: string;
